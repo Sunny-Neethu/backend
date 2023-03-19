@@ -39,9 +39,5 @@ exports.userVlidation = (req, res, next) => {
 
 exports.validateUserSignIn = [
   check('email').trim().isEmail().withMessage('email / password is required!'),
-  check('password')
-    .trim()
-    .not()
-    .isEmpty()
-    .withMessage('email / password is required!'),
+  check('password').trim().not().isEmpty().withMessage('email / password is required!'),
 ];
